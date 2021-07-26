@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="js/scripts.js"></script>
+  <title>Js pizza ticket project.</title>
+</head>
+<div class="container">
+  <body>
+    <div class="row" id="header">
+      <div class="col-md-12">
+        <h1>Welcome to the Pizza ticket maker</h1>
+      </div>
+    </div>
+    <div class="row" id="pizzaFormRow">
+      <div class="col-md-12">
+        <div class="well">
+          <h1>Please select size and toppings.</h1>
+        <h2>All pizzas have base price of 5. proteins are 2$ a topping and veggies are 1$ per.</h2>
+        <h2>Small:3$ Medium:6$ Large:9$</h2>
+        <form id="pizzaInputForm">
+          <h1>Pizza size</h1>
+          <input type="radio" id="smallSize" name="smallSize" value="small">
+          <label for="smallSize">Small</label>
+          <input type="radio" id="mediumSize" name="mediumSize" value="medium">
+          <label for="mediumSize">Medium</label>
+          <input type="radio" id="largeSize" name="largeSize" value="large">
+          <label for="largeSize">Large</label>
+          <h1>Protein Toppings</h1>
+          <input type="checkbox" style="vertical-align: middle" id="protien1" name="protien1" value="Pepperoni">
+          <label for="protien1">Pepperoni</label><br>
+          <input type="checkbox" id="protien2" name="protien2" value="Chicken">
+          <label for="protien2">Chicken</label><br>
+          <input type="checkbox" id="protine3" name="protien3" value="Tofu">
+          <label for="protien3">Tofu</label>
+          <br> 
+          <input type="checkbox" id="Protien4" name="protine4" value="Beef">
+          <label for="protiene4">Beef</label>
+          <h1>Vegetable toppings</h1>
+          <input type="checkbox" id="veg1" name="veg1" value="Onion">
+          <label for="protien1">Onion</label><br>
+          <input type="checkbox" id="veg2" name="veg2" value="Peppers">
+          <label for="protien2">Peppers</label><br>
+          <input type="checkbox" id="veg3" name="veg3" value="Olives">
+          <label for="protien3">Olives</label> 
+          <br>
+          <input type="checkbox" id="veg4" name="veg4" value="Pineapple">
+          <label for="protiene4">Pineapple</label>  
+          <br>
+          <button>Build my Pie</button>
+        </form>
+        </div>
+      </div>
+    </div>
+    <div class="row" id="ticketDisplayRow">
+      <div class="col-md-12">
+        <div class="panel" id="thickeDisplayPanel">
+          <div class="panel-body">A holding Panel</div>
+        </div>
+      </div>
+    </div>
+    <div class="row" id="bottom">
+      <div class="col-md-12" id="orderLinkArea">
+        <a href="#">Order Now!</a>
+      </div>
+    </div>
+  </body>
+</div>
+</html>
