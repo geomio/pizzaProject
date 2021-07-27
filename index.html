@@ -12,6 +12,7 @@
     <div class="row" id="header">
       <div class="col-md-12">
         <h1>Welcome to the Pizza ticket maker</h1>
+        <button id="showStart">Order here.</button>
       </div>
     </div>
     <div class="row" id="pizzaFormRow">
@@ -22,34 +23,32 @@
         <h2>Small:3$ Medium:6$ Large:9$</h2>
         <form id="pizzaInputForm">
           <h1>Pizza size</h1>
-          <input type="radio" id="smallSize" name="smallSize" value="small">
+          <input type="radio" id="smallSize" name="size" value="small">
           <label for="smallSize">Small</label>
-          <input type="radio" id="mediumSize" name="mediumSize" value="medium">
+          <input type="radio" id="mediumSize" name="size" value="medium">
           <label for="mediumSize">Medium</label>
-          <input type="radio" id="largeSize" name="largeSize" value="large">
+          <input type="radio" id="largeSize" name="size" value="large">
           <label for="largeSize">Large</label>
           <h1>Protein Toppings</h1>
-          <input type="checkbox" style="vertical-align: middle" id="protien1" name="protien1" value="Pepperoni">
-          <label for="protien1">Pepperoni</label><br>
-          <input type="checkbox" id="protien2" name="protien2" value="Chicken">
-          <label for="protien2">Chicken</label><br>
-          <input type="checkbox" id="protine3" name="protien3" value="Tofu">
+          <input type="checkbox" style="vertical-align: middle" id="protien1" name="protein" value="Pepperoni">
+          <label for="protien1">Pepperoni</label>
+          <input type="checkbox" id="protien2" name="protein" value="Chicken">
+          <label for="protien2">Chicken</label>
+          <input type="checkbox" id="protine3" name="protein" value="Tofu">
           <label for="protien3">Tofu</label>
-          <br> 
-          <input type="checkbox" id="Protien4" name="protine4" value="Beef">
+          <input type="checkbox" id="Protien4" name="protein" value="Beef">
           <label for="protiene4">Beef</label>
           <h1>Vegetable toppings</h1>
-          <input type="checkbox" id="veg1" name="veg1" value="Onion">
-          <label for="protien1">Onion</label><br>
-          <input type="checkbox" id="veg2" name="veg2" value="Peppers">
-          <label for="protien2">Peppers</label><br>
-          <input type="checkbox" id="veg3" name="veg3" value="Olives">
+          <input type="checkbox" id="veg1" name="veg" value="Onion">
+          <label for="protien1">Onion</label>
+          <input type="checkbox" id="veg2" name="veg" value="Peppers">
+          <label for="protien2">Peppers</label>
+          <input type="checkbox" id="veg3" name="veg" value="Olives">
           <label for="protien3">Olives</label> 
-          <br>
-          <input type="checkbox" id="veg4" name="veg4" value="Pineapple">
+          <input type="checkbox" id="veg4" name="veg" value="Pineapple">
           <label for="protiene4">Pineapple</label>  
           <br>
-          <button>Build my Pie</button>
+          <button id="pieBuild">Build my Pie</button>
         </form>
         </div>
       </div>

@@ -29,4 +29,29 @@ let userTopping = new Topping(['ham', 'chicken'], ['peppers', 'olives']);
 let userPizza = new Pizza("small", userTopping, 5);
 userPizza.sizePrice();
 userPizza.price = userPizza.price + userTopping.toppingPrice();
-console.table(userPizza);
+
+let proteinArray = [];
+let veggieArray = []
+
+// $("")
+
+// $("input:checkbox[name=protien]:checked").each(function(){
+//   var checked = $("this").val();
+  
+//   if ($"(this").is(':checked') {
+//     proteinArray.push(checked);
+//   }
+// });
+
+$("input:checkbox[name=veg]:checked").each(function(){
+  veggieArray.push($(this).val());
+});
+
+$(document).ready(function() {   
+  $("button#showStart").click(function(event) {
+      event.preventDefault();
+      $("#pizzaInputForm").show();
+      
+  
+  });
+});
