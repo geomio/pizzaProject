@@ -33,18 +33,14 @@ userPizza.price = userPizza.price + userTopping.toppingPrice();
 let proteinArray = [];
 let veggieArray = []
 
-// $("")
-
-// $("input:checkbox[name=protien]:checked").each(function(){
-//   var checked = $("this").val();
-  
-//   if ($"(this").is(':checked') {
-//     proteinArray.push(checked);
-//   }
-// });
+//work on submit function
 
 $("input:checkbox[name=veg]:checked").each(function(){
   veggieArray.push($(this).val());
+});
+
+$("input:checkbox[name=protein]:checked").each(function(){
+  proteinArray.push($(this).val());
 });
 
 $(document).ready(function() {   
