@@ -20,34 +20,38 @@ function Topping(protein, veggie) {
   this.protein = protein;
   this.veggie = veggie;
 }
-// Topping price prototype for price
+// Topping price prototype for total price
 Topping.prototype.toppingPrice = function(){
   return this.protein.length * 2 + this.veggie.length;
 }
-//user object and topping below
-let userTopping = new Topping(['ham', 'chicken'], ['peppers', 'olives']);
-let userPizza = new Pizza("small", userTopping, 5);
-userPizza.sizePrice();
-userPizza.price = userPizza.price + userTopping.toppingPrice();
 
-let proteinArray = [];
-let veggieArray = []
-
-//work on submit function
-
-$("input:checkbox[name=veg]:checked").each(function(){
-  veggieArray.push($(this).val());
-});
-
-$("input:checkbox[name=protein]:checked").each(function(){
-  proteinArray.push($(this).val());
-});
+Pizza.prototype.showOrder = function(){
+  $(".panel").show();
+  $("span#sizeOutput").text(this.size);
+  let shownProteinTopping = "Protein:" + " " + this.toppings.protein.join(" , ") + " " + "Veggie:" + " " + this.toppings.veggie.join(" , ")
+  $("span#toppingOutput").text(shownProteinTopping);
+  $("span#priceOutput").text(this.price);
+};
 
 $(document).ready(function() {   
-  $("button#showStart").click(function(event) {
-      event.preventDefault();
+  $("button#showStart").click(function() {
       $("#pizzaInputForm").show();
-      
-  
+  });
+  $("form#pizzaInputForm").submit(function(event){
+    event.preventDefault();
+    let proteinArray = [];
+    let veggieArray = [];
+    $("input:checkbox[name=veg]:checked").each(function(){
+  veggieArray.push($(this).val());
+});
+    $("input:checkbox[name=protein]:checked").each(function(){
+  proteinArray.push($(this).val());
+});
+    let pizzaSizeInput = $("input:radio[name=size]:checked").val();
+    let userTopping = new Topping(proteinArray, veggieArray);
+    let userPizza = new Pizza(pizzaSizeInput, userTopping, 5);
+    userPizza.sizePrice();
+    userPizza.price = userPizza.price + userTopping.toppingPrice();
+    userPizza.showOrder();
   });
 });
