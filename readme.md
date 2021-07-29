@@ -28,9 +28,9 @@ example below:
 
 Your pizza
 
-Pizza size: Small
-Your toppings: Protein: Ham, Pepperoni Veggie: olive, onion,
-Total price: $14
+*Pizza size: Small
+*Your toppings: Protein: Ham, Pepperoni Veggie: olive, onion,
+*Total price: $14
 
 # Known Bugs
 
