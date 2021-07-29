@@ -25,6 +25,7 @@ Topping.prototype.toppingPrice = function(){
   return this.protein.length * 2 + this.veggie.length;
 }
 
+//Prototype to show user their pizza object.
 Pizza.prototype.showOrder = function(){
   $(".panel").show();
   $("span#sizeOutput").text(this.size);

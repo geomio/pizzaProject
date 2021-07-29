@@ -23,7 +23,7 @@
         <h2>Small:3$ Medium:6$ Large:9$</h2>
         <form id="pizzaInputForm">
           <h1>Pizza size</h1>
-          <input type="radio" id="smallSize" name="size" value="small">
+          <input type="radio" id="smallSize" name="size" value="small" checked="checked">
           <label for="smallSize">Small</label>
           <input type="radio" id="mediumSize" name="size" value="medium">
           <label for="mediumSize">Medium</label>
@@ -53,17 +53,17 @@
         </div>
       </div>
     </div>
-    <div class="row" id="ticketDisplayRow">
+    <div class="row" id="pizzaDisplayRow">
       <div class="col-md-12">
-        <div class="panel" id="reciptDisplayPanel">
+        <div class="panel" id="receiptDisplayPanel">
           <div class="panel-body">
             <h1>Your Pizza</h1>
             <ul>
               <li>Pizza Size: <span id="sizeOutput"></span></li>
               <li>Your toppings: <span id="toppingOutput"></span> <span id="toppingOutput2"></span></li>
-              <li>Total price: <span id="priceOutput"></span></li>
+              <li>Total price: $ <span id="priceOutput"></span></li>
             </ul>
-            <a href="#">Order Now!</a>
+            <button><a href="#">Order Now!</a></button>
           </div>
         </div>
       </div>
