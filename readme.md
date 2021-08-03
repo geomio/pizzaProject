@@ -18,7 +18,27 @@ A basic html page linked to bootstrap and jquery that will let user fill out for
 
 ## Specifications
 
-1. pizza input form will take user input options for pizza size, and toppings, when form button Build my Pie button is clicked
+<!-- 
+Describe: numberOfOccurrencesInText()
+Test: "It should return 0 occurrences of a word for an empty string"
+Code:
+const text = "";
+const word = " red";
+numberOfOccurrencesInText(word, text);
+Expected Output: 0
+-->
+
+Description: Pizza()
+Test: "It should make new object called pizza"
+Code: const userPizza = new Pizza('small', ["pepperoni"], ["olives"])
+Expected Output: Pizza {size: "small", toppings: Array(1), price: 5}
+
+Description: Pizza.prototype.sizePrice()
+Test: "should change total price based on size"
+const userPizza = new Pizza('small', [pepperoni], ["olives"])
+Code: userPizza.sizePrice()
+Expected Output: userPizza.price = 8;
+<!-- 1. pizza input form will take user input options for pizza size, and toppings, when form button Build my Pie button is clicked
 
 2. The total price number is increased with sizes 3 for small, 4 for medium, and 9 for large. It is also increased x2 per protein topping and x1 for veggie toppings. base price starts at 5
 
@@ -30,7 +50,7 @@ Your pizza
 
 * Pizza size: Small
 * Your toppings: Protein: Ham, Pepperoni Veggie: olive, onion,
-* Total price: $14
+* Total price: $14 -->
 
 # Known Bugs
 

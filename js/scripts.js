@@ -1,8 +1,8 @@
 //Pizza constructor
-function Pizza(size, toppings, price) {
+function Pizza(size, toppings) {
   this.size = size
   this.toppings = toppings
-  this.price = price
+  this.price = 5
 }
 //Prototype for pizza to find size price
 Pizza.prototype.sizePrice = function(){
@@ -50,7 +50,7 @@ $(document).ready(function() {
 });
     let pizzaSizeInput = $("input:radio[name=size]:checked").val();
     let userTopping = new Topping(proteinArray, veggieArray);
-    let userPizza = new Pizza(pizzaSizeInput, userTopping, 5);
+    let userPizza = new Pizza(pizzaSizeInput, userTopping);
     userPizza.sizePrice();
     userPizza.price = userPizza.price + userTopping.toppingPrice();
     userPizza.showOrder();
