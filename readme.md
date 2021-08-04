@@ -17,6 +17,8 @@ A basic html page linked to bootstrap and jquery that will let user fill out for
 5. open index.html with web browser
 
 ## Specifications
+
+```js
 Description: Pizza()  
 Test: "It should make new object called pizza"  
 Code: const userPizza = new Pizza('small', ["pepperoni"], ["olives"])  
@@ -52,6 +54,8 @@ const userPizza = new Pizza(small, userTopping,)
 userPizza.showOrder()  
 Expected Output: Should return undefined but html should show small, the toppings pepperoni, and  olives ,and price of 5  
 <!-- This is because math is not fully handled in total in this step it is Expected. -->
+
+```
 
 # Known Bugs
 
