@@ -17,17 +17,6 @@ A basic html page linked to bootstrap and jquery that will let user fill out for
 5. open index.html with web browser
 
 ## Specifications
-
-<!-- 
-Describe: numberOfOccurrencesInText()
-Test: "It should return 0 occurrences of a word for an empty string"
-Code:
-const text = "";
-const word = " red";
-numberOfOccurrencesInText(word, text);
-Expected Output: 0
--->
-
 Description: Pizza()
 Test: "It should make new object called pizza"
 Code: const userPizza = new Pizza('small', ["pepperoni"], ["olives"])
@@ -35,22 +24,30 @@ Expected Output: Pizza {size: "small", toppings: Array(1), price: 5}
 
 Description: Pizza.prototype.sizePrice()
 Test: "should change total price based on size"
-const userPizza = new Pizza('small', [pepperoni], ["olives"])
+const userPizza = new Pizza('small', ["pepperoni"], ["olives"])
 Code: userPizza.sizePrice()
 Expected Output: userPizza.price = 8;
-<!-- 1. pizza input form will take user input options for pizza size, and toppings, when form button Build my Pie button is clicked
 
-2. The total price number is increased with sizes 3 for small, 4 for medium, and 9 for large. It is also increased x2 per protein topping and x1 for veggie toppings. base price starts at 5
+Description: Topping()
+Test: "it should make new topping object"
+const proteinArray = []
+const veggieArray = []
+Code: userTopping = new Topping(["pepperoni"], ["olives"])
+Expected Output: Topping {protein: Array(1), veggie: Array(1)}
 
-3. after javascript prototype calculates total user pizza is displayed in the receipt display area below.
+Description: Topping.prototype.toppingPrice()
+Test: "Will determine topping price"
+userTopping = new Topping(["pepperoni"], ["olives"])
+Code: userTopping.toppingPrice();
+Expected Output: 3;
 
-example below:
-
-Your pizza
-
-* Pizza size: Small
-* Your toppings: Protein: Ham, Pepperoni Veggie: olive, onion,
-* Total price: $14 -->
+Description: Pizza.prototype.showOrder();
+Test: "This show html area and text the size, topping, and price to html from pizza object"
+userTopping = new Topping(["pepperoni"], ["olives"])
+const userPizza = new Pizza(small, userTopping,)
+Code: userPizza.showOrder()
+Expected Output: Should return undefined but html should show small, the toppings pepperoni, and olives ,and price of 5 
+<!-- This is because math is not fully handled in total in this step it is Expected. -->
 
 # Known Bugs
 
