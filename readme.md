@@ -24,28 +24,32 @@ Expected Output: Pizza {size: "small", toppings: Array(1), price: 5}
 
 Description: Pizza.prototype.sizePrice()  
 Test: "should change total price based on size"  
+Code:  
 const userPizza = new Pizza('small', ["pepperoni"], ["olives"])  
-Code: userPizza.sizePrice()  
+userPizza.sizePrice()  
 Expected Output: userPizza.price = 8;  
 
 Description: Topping()  
 Test: "it should make new topping object"  
-const proteinArray = []  
-const veggieArray = []  
-Code: userTopping = new Topping(["pepperoni"], ["olives"])  
+Code:  
+const proteinArray = ["pepperoni"]  
+const veggieArray = ["olive"]  
+userTopping = new Topping(proteinArray, veggieArray)  
 Expected Output: Topping {protein: Array(1), veggie: Array(1)}  
 
 Description: Topping.prototype.toppingPrice()  
 Test: "Will determine topping price"  
+Code:  
 userTopping = new Topping(["pepperoni"], ["olives"])  
-Code: userTopping.toppingPrice();  
+userTopping.toppingPrice();  
 Expected Output: 3;  
 
 Description: Pizza.prototype.showOrder();  
 Test: "This show html area and text the size, topping, and price to html from pizza object"  
+Code:  
 userTopping = new Topping(["pepperoni"], ["olives"])  
 const userPizza = new Pizza(small, userTopping,)  
-Code: userPizza.showOrder()  
+userPizza.showOrder()  
 Expected Output: Should return undefined but html should show small, the toppings pepperoni, and  olives ,and price of 5  
 <!-- This is because math is not fully handled in total in this step it is Expected. -->
 
